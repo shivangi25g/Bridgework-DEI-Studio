@@ -1,0 +1,1879 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bridgework DEI Studio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="Bridgework home">
+        <span class="brand-mark">B</span>
+        <span>Bridgework DEI Studio</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#memoir">Care lens</a>
+        <a href="#strategy-lens">Strategy lens</a>
+        <a href="#voices-india">Voices</a>
+        <a href="#DEI-lab">DEI concepts</a>
+        <a href="#front-games">Games</a>
+        <a href="#so-what">So what?</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <img src="assets/unessay-hero.png" alt="Illustration of an interactive DEI unessay with comics, videos, surveys, mind maps, and collaborative learning">
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">An interactive unessay on equity, care, strategy, and lived experience</p>
+          <h1>Behind the Door, Behind the Dashboard.</h1>
+          <p>
+            Our project explores DEI through two connected lenses: frontline shelter care and strategy/data systems. Together, they ask who gets access, who carries barriers, and how inclusion can be designed into real life.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#memoir">Enter care lens</a>
+            <a class="button secondary" href="#strategy-lens">Explore strategy lens</a>
+            <a class="button ghost" href="preview.html">3-minute preview</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="lens-choice" aria-label="Choose where exclusion appears first">
+        <div class="choice-intro">
+          <p class="eyebrow">Start here</p>
+          <h2>Where do you notice exclusion first?</h2>
+          <p>Choose a lens. One opens a shelter door. The other lights up a dashboard. Both reveal the same DEI question: who is being asked to carry a barrier the system could remove?</p>
+        </div>
+        <div class="choice-stage">
+          <a class="choice-portal door-portal" href="#memoir">
+            <span class="portal-kicker">Care lens</span>
+            <div class="portal-art door-art" aria-hidden="true">
+              <span class="door-frame"><i></i></span>
+              <span class="door-light"></span>
+            </div>
+            <h3>Behind the Door</h3>
+            <p>Exclusion appears in intake forms, food access, privacy, crisis response, supply rooms, spiritual safety, and dignity.</p>
+          </a>
+          <a class="choice-portal dashboard-portal" href="#strategy-lens">
+            <span class="portal-kicker">Strategy lens</span>
+            <div class="portal-art dashboard-art" aria-hidden="true">
+              <span class="dash-window"><i></i><i></i><i></i></span>
+              <span class="dash-chart"><i></i><i></i><i></i></span>
+              <span class="dash-alert"></span>
+            </div>
+            <h3>Behind the Dashboard</h3>
+            <p>Exclusion appears in data gaps, product design, operations, access, resource flow, and who gets counted before decisions scale.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="thesis-band" aria-label="Central thesis">
+        <span>Central thesis</span>
+        <p>DEI is not only awareness, kindness, or a set of values. It is the practice of redesigning care, work, learning, and systems so people are not left to overcome barriers alone.</p>
+      </section>
+
+      <section class="experience-guide" id="experience-guide" aria-label="How to experience this unessay">
+        <div>
+          <span>01</span>
+          <h2>Play</h2>
+          <p>Start with the games to warm up shared language around access, care, trust, bias, and inclusive choices.</p>
+        </div>
+        <div>
+          <span>02</span>
+          <h2>Enter</h2>
+          <p>Move through the care lens and strategy lens to see how DEI changes when barriers are made visible in real systems.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <h2>Listen</h2>
+          <p>Use the India and Canada voices as a listening circle across age, work, identity, community, and professional experience.</p>
+        </div>
+        <div>
+          <span>04</span>
+          <h2>Conclude</h2>
+          <p>End with the course connections and final takeaway: inclusion becomes real when it changes design and practice.</p>
+        </div>
+      </section>
+
+      <section class="lens-bridge" aria-label="Two professional DEI lenses">
+        <article>
+          <span>Lens 01</span>
+          <h2>Shelter, care, and frontline systems</h2>
+          <p>Shivangi's lens asks what DEI looks like when people are navigating homelessness, trauma, mental health, addictions, abuse, safety planning, and the daily realities of service systems.</p>
+        </article>
+        <article>
+          <span>Lens 02</span>
+          <h2>Strategy, data, and inclusive design</h2>
+          <p>Vivek's lens asks what DEI looks like when leaders build products, dashboards, healthcare strategies, consulting spaces, volunteer programs, and systems that decide who gets access.</p>
+        </article>
+      </section>
+
+      <section class="section muted" id="front-games">
+        <div class="section-heading">
+          <p class="eyebrow">Play first</p>
+          <h2>Start with games that make DEI feel hands-on.</h2>
+          <p>These quick activities introduce shared DEI language, then connect the care lens and strategy lens through barriers, access, and decision-making.</p>
+        </div>
+
+        <div class="puzzle-zone front-puzzle-zone">
+          <article class="game-card word-search-card">
+            <p class="eyebrow">Word search</p>
+            <h3>Find the DEI words.</h3>
+            <p>Click the letters of a word in order, then check it. Words may go across or down.</p>
+            <div class="word-search" id="word-search" aria-label="DEI word search puzzle"></div>
+            <div class="word-bank" id="word-bank" aria-label="Words to find"></div>
+            <div class="puzzle-actions">
+              <button class="button primary" id="word-check">Check word</button>
+              <button class="button secondary" id="word-clear">Clear letters</button>
+            </div>
+            <div class="game-result" aria-live="polite">
+              <span>Word search result</span>
+              <p id="word-result">Find: EQUITY, CARE, TRUST, ACCESS, ALLY, and BIAS.</p>
+            </div>
+          </article>
+
+          <article class="game-card crossword-card curated-hidden">
+            <p class="eyebrow">Mini crossword</p>
+            <h3>Decode the practice words.</h3>
+            <p>Type the word that matches each clue. Use uppercase or lowercase.</p>
+            <div class="crossword-list">
+              <label>
+                Fair support that removes barriers
+                <input class="crossword-input" data-answer="equity" type="text" autocomplete="off">
+              </label>
+              <label>
+                Acting with care and influence beside others
+                <input class="crossword-input" data-answer="ally" type="text" autocomplete="off">
+              </label>
+              <label>
+                Design that lets people participate
+                <input class="crossword-input" data-answer="access" type="text" autocomplete="off">
+              </label>
+              <label>
+                Assumption that can shape decisions
+                <input class="crossword-input" data-answer="bias" type="text" autocomplete="off">
+              </label>
+            </div>
+            <div class="puzzle-actions">
+              <button class="button primary" id="crossword-check">Check answers</button>
+              <button class="button secondary" id="crossword-clear">Reset</button>
+            </div>
+            <div class="game-result" aria-live="polite">
+              <span>Crossword result</span>
+              <p id="crossword-result">Try the clues, then check your answers.</p>
+            </div>
+          </article>
+
+          <article class="game-card sort-card curated-hidden">
+            <p class="eyebrow">Sorting game</p>
+            <h3>Ally move or rethink?</h3>
+            <p>Click each action to sort it. The goal is not perfection; it is noticing what DEI looks like in behavior.</p>
+            <div class="sort-grid">
+              <button class="sort-chip" data-good="true">Share crDEIt in a group project</button>
+              <button class="sort-chip" data-good="false">Ask one marginalized person to speak for everyone</button>
+              <button class="sort-chip" data-good="true">Add captions and multiple ways to participate</button>
+              <button class="sort-chip" data-good="false">Ignore feedback because nobody complained before</button>
+              <button class="sort-chip" data-good="true">Interrupt a biased joke without making the harmed person respond</button>
+              <button class="sort-chip" data-good="false">Invite someone only so the group looks diverse</button>
+            </div>
+            <div class="game-result" aria-live="polite">
+              <span>Sorting score</span>
+              <p id="sort-result">Click an action to begin.</p>
+            </div>
+          </article>
+
+          <article class="game-card scatter-card curated-hidden">
+            <p class="eyebrow">Inclusive Scattergories</p>
+            <h3>Name what belongs.</h3>
+            <p>Use the letter and category to name an example. The goal is broad thinking, not perfect answers.</p>
+            <div class="scatter-prompt">
+              <span id="scatter-letter">B</span>
+              <p id="scatter-category">Cultural foods</p>
+            </div>
+            <label class="game-input-label">
+              Your answer
+              <input id="scatter-answer" type="text" autocomplete="off" placeholder="Example: biryani">
+            </label>
+            <div class="puzzle-actions">
+              <button class="button primary" id="scatter-check">Check answer</button>
+              <button class="button secondary" id="scatter-new">New prompt</button>
+            </div>
+            <div class="game-result" aria-live="polite">
+              <span>Scattergories result</span>
+              <p id="scatter-result">Try a word that starts with the letter and fits the category.</p>
+            </div>
+          </article>
+
+          <article class="game-card bingo-card">
+            <p class="eyebrow">Care Lens Bingo</p>
+            <h3>Spot the barriers behind the service.</h3>
+            <p>Click squares that could shape whether someone can access care, shelter, planning, or safety with dignity.</p>
+            <div class="bingo-grid" aria-label="Care lens bingo card">
+              <button class="bingo-square">Needs language support</button>
+              <button class="bingo-square">Has trauma history</button>
+              <button class="bingo-square">Lacks documents</button>
+              <button class="bingo-square">Needs privacy</button>
+              <button class="bingo-square">Needs harm-reduction support</button>
+              <button class="bingo-square">Afraid to ask for help</button>
+              <button class="bingo-square">Needs accessible transportation</button>
+              <button class="bingo-square">Navigating mental health stress</button>
+              <button class="bingo-square">Needs trust before planning</button>
+            </div>
+            <div class="game-result" aria-live="polite">
+              <span>Bingo progress</span>
+              <p id="bingo-result">Click three in a row to reveal how barriers can cluster.</p>
+            </div>
+          </article>
+
+          <article class="game-card empathy-card">
+            <p class="eyebrow">Care + Strategy Scenario Cards</p>
+            <h3>Choose the more inclusive move.</h3>
+            <p>Draw a scenario from either the care lens or strategy lens, then choose the response that reduces barriers instead of shifting burden.</p>
+            <div class="empathy-scenario">
+              <span>Scenario</span>
+              <p id="empathy-scenario">A resident misses an appointment after a difficult night.</p>
+            </div>
+            <div class="empathy-options">
+              <button class="empathy-choice" data-care="true">Ask what got in the way and rebuild the plan around the barrier.</button>
+              <button class="empathy-choice" data-care="false">Assume they are not motivated.</button>
+            </div>
+            <div class="puzzle-actions">
+              <button class="button secondary" id="empathy-new">New scenario</button>
+            </div>
+            <div class="game-result" aria-live="polite">
+              <span>Empathy result</span>
+              <p id="empathy-result">Choose a response to see the inclusion effect.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="memoir">
+        <div class="section-heading">
+          <p class="eyebrow">Care lens</p>
+          <h2>DEI through shelter work, psychology, and frontline care.</h2>
+          <p>This section combines Shivangi's lived professional lens with the Behind the Door simulation. It connects DEI concepts to social support work, case management, union advocacy, shelter leadership, harm reduction, and trauma-informed access.</p>
+        </div>
+
+        <div class="memoir-layout">
+          <article class="memoir-card">
+            <p class="eyebrow">My lens</p>
+            <h3>DEI stopped being abstract when it became someone's doorway, clinic visit, shift schedule, grievance, or safety plan.</h3>
+            <p>I came to this work through psychology, frontline social services, and community leadership. In shelter work, I saw how policies that look neutral on paper can feel impossible when someone is uninsured, traumatized, undocumented, exhausted, grieving, or simply not believed.</p>
+            <p>As a case manager and social support worker, I learned that equity is often quiet and practical: finding the right form, slowing down an intake, listening without stigma, making a referral that actually fits, or asking what safety means to the person in front of you.</p>
+            <p>As an interim shelter manager, I learned that inclusion also lives in operations: staffing models, risk protocols, healthcare partnerships, harm-reduction training, scheduling, and how leaders respond when fear enters the room.</p>
+          </article>
+
+          <aside class="backpack-card" aria-label="Invisible backpack">
+            <p class="eyebrow">Invisible backpack</p>
+            <h3>What I carry into DEI work</h3>
+            <div class="backpack-tags">
+              <span>Clinical psychology</span>
+              <span>Frontline care</span>
+              <span>Case management</span>
+              <span>Shelter leadership</span>
+              <span>Harm reduction</span>
+              <span>Union advocacy</span>
+              <span>Immigrant lens</span>
+              <span>MBA learning</span>
+              <span>Community programming</span>
+              <span>Hope with boundaries</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="memoir-timeline">
+          <article>
+            <span>Psychology</span>
+            <h3>I learned to ask what sits beneath behaviour.</h3>
+            <p>Psychology gave me language for cognition, trauma, stigma, motivation, and trust. It taught me that people are rarely just "difficult"; they are often adapting to what systems have taught them to expect.</p>
+          </article>
+          <article>
+            <span>Frontline worker</span>
+            <h3>I learned that access is emotional, not only logistical.</h3>
+            <p>A service can exist and still feel unreachable. Forms, tone, timing, eligibility, cost, shame, and fear all shape whether someone can use support.</p>
+          </article>
+          <article>
+            <span>Case manager</span>
+            <h3>I learned that equity is individualized planning.</h3>
+            <p>Housing stability, employment, healthcare, education, identity, and community all intersect. The plan that works is the one built with the person, not around them.</p>
+          </article>
+          <article>
+            <span>Interim shelter manager</span>
+            <h3>I learned that inclusion must survive pressure.</h3>
+            <p>In high-risk moments, values are tested. Equity becomes protocols, staffing, training, communication, and whether staff and residents are treated with dignity under stress.</p>
+          </article>
+          <article>
+            <span>MBA student</span>
+            <h3>I am learning to connect care with systems leadership.</h3>
+            <p>Business education helps me translate social impact into strategy, operations, partnerships, and sustainable change without losing the human story underneath.</p>
+          </article>
+        </div>
+
+        <div class="door-experience">
+          <div>
+            <p class="eyebrow">Interactive story</p>
+            <h3>Shelter spaces: what each room reveals about DEI.</h3>
+            <p>Move through the mini shelter map. Each door opens a composite, anonymized moment from working with people experiencing mental health challenges, addictions, homelessness, abuse, poverty, and system barriers.</p>
+            <div class="shelter-mini-map" aria-label="Illustrated shelter spaces map">
+              <span class="mini-room intake-room">Intake</span>
+              <span class="mini-room dorm-room">Dorm</span>
+              <span class="mini-room dining-room">Dining</span>
+              <span class="mini-room quiet-room">Quiet</span>
+              <span class="mini-room supply-room">Supply</span>
+              <span class="mini-room care-room">Care</span>
+            </div>
+          </div>
+          <div class="door-buttons" aria-label="Shelter room selector">
+            <button class="door-button is-active" data-door="front"><span>Front door</span></button>
+            <button class="door-button" data-door="intake"><span>Intake room</span></button>
+            <button class="door-button" data-door="dorm"><span>Dorm room</span></button>
+            <button class="door-button" data-door="dining"><span>Dining / mess</span></button>
+            <button class="door-button" data-door="mDEIcal"><span>MDEIcal room</span></button>
+            <button class="door-button" data-door="quiet"><span>Prayer / quiet room</span></button>
+            <button class="door-button" data-door="supply"><span>Supply room</span></button>
+            <button class="door-button" data-door="office"><span>Staff office</span></button>
+            <button class="door-button" data-door="board"><span>Board room</span></button>
+            <button class="door-button" data-door="exit"><span>Exit</span></button>
+          </div>
+          <article class="door-panel" data-room="front" aria-live="polite">
+            <div class="door-scene" aria-hidden="true">
+              <div class="scene-sky"></div>
+              <div class="scene-building">
+                <i></i><i></i><i></i><i></i>
+                <div class="scene-door"></div>
+              </div>
+              <div class="scene-path"></div>
+            </div>
+            <span id="door-kicker">Front door</span>
+            <h3 id="door-title">First impressions can become barriers.</h3>
+            <p id="door-story">A person arrives guarded, tired, and frustrated. The easy assumption is non-compliance. A more equitable question is: what happened before they reached this door?</p>
+            <div class="door-meta">
+              <div>
+                <strong>Evidence</strong>
+                <p id="door-stat">Homelessness and poverty are shaped by systems, not individual character alone.</p>
+              </div>
+              <div>
+                <strong>Theory</strong>
+                <p id="door-theory">Trauma-informed care and implicit bias.</p>
+              </div>
+              <div>
+                <strong>DEI lens</strong>
+                <p id="door-lens">Unconscious bias and trauma-informed access.</p>
+              </div>
+              <div>
+                <strong>Reflection</strong>
+                <p id="door-reflection">What story did I make up before I had enough context?</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted" id="strategy-lens">
+        <div class="section-heading">
+          <p class="eyebrow">Strategy lens</p>
+          <h2>DEI through technology, consulting, healthcare, and inclusive systems.</h2>
+          <p>This section connects Vivek Jain's strategy background to analytics, digital products, healthcare consulting, community impact, accessibility, and the leadership choices behind systems.</p>
+        </div>
+
+        <div class="strategy-layout">
+          <article class="strategy-card featured-strategy">
+            <div>
+              <p class="eyebrow">Vivek's lens</p>
+              <h3>Inclusion is also built in dashboards, product journeys, service design, and who gets access to opportunity.</h3>
+              <p>Vivek's experience brings a business and technology perspective to DEI, showing how strategy decisions shape who is seen, who is served, and whose barriers become visible through data.</p>
+              <p>This lens asks how inclusive leadership can show up in digital platforms, seller support, healthcare analytics, consulting spaces, volunteer programs, and accessible education.</p>
+            </div>
+            <div class="strategy-flow-visual" aria-label="Illustration of an inclusive strategy dashboard">
+              <div class="visual-dashboard">
+                <span></span><span></span><span></span>
+                <strong>Access gaps</strong>
+                <i></i><i></i><i></i>
+              </div>
+              <div class="flow-node data-node">Data</div>
+              <div class="flow-node voice-node">Missing voices</div>
+              <div class="flow-node design-node">Inclusive design</div>
+            </div>
+          </article>
+
+          <article class="strategy-card">
+            <span>Digital access</span>
+            <h3>Designing platforms around user barriers.</h3>
+            <p>Work on Tata Neu, Croma, seller hubs, help centers, and customer journeys connects DEI to usability, access, language, navigation, and whether people can actually use the systems meant for them.</p>
+          </article>
+          <article class="strategy-card">
+            <span>Data + fairness</span>
+            <h3>Dashboards can reveal exclusion.</h3>
+            <p>NPS dashboards, feedback systems, segmentation, and targeting can make pain points visible. The DEI question is: whose feedback counts, and what changes because of it?</p>
+          </article>
+          <article class="strategy-card">
+            <span>Healthcare strategy</span>
+            <h3>Equity depends on who receives guidance and care.</h3>
+            <p>Pharma consulting and healthcare analytics connect to access, patient needs, provider outreach, and how data-driven decisions affect real people in health systems.</p>
+          </article>
+          <article class="strategy-card">
+            <span>Community impact</span>
+            <h3>Leadership can mobilize care at scale.</h3>
+            <p>MDEIcal kits, blood donation camps, health screenings, educational kits, and volunteer coordination show DEI as action: reducing barriers and bringing support closer to communities.</p>
+          </article>
+          <article class="strategy-card">
+            <span>Accessibility</span>
+            <h3>Inclusion includes how knowledge is delivered.</h3>
+            <p>Producing audiobooks for visually impaired students connects directly to accessibility, universal design, and the belief that learning should not depend on one format.</p>
+          </article>
+          <article class="strategy-card">
+            <span>Inclusive leadership</span>
+            <h3>Mentorship and team systems shape belonging.</h3>
+            <p>Leading analysts, mentoring juniors, building SOPs, and guiding consulting club members connects DEI to psychological safety, fair development, and who gets coached toward success.</p>
+          </article>
+        </div>
+
+        <div class="dashboard-experience">
+          <div>
+            <p class="eyebrow">Interactive strategy story</p>
+            <h3>Behind the Dashboard: walk through a system before it scales.</h3>
+            <p>Move through strategy rooms inspired by product, analytics, healthcare, consulting, community work, and accessibility. Each room reveals the DEI question behind a business decision.</p>
+          </div>
+          <div class="dashboard-buttons" aria-label="Strategy system room selector">
+            <button class="dashboard-room-button is-active" data-strategy-room="seller"><span>Seller hub</span></button>
+            <button class="dashboard-room-button" data-strategy-room="dashboard"><span>Data dashboard</span></button>
+            <button class="dashboard-room-button" data-strategy-room="healthcare"><span>Healthcare model</span></button>
+            <button class="dashboard-room-button" data-strategy-room="consulting"><span>Consulting club</span></button>
+            <button class="dashboard-room-button" data-strategy-room="community"><span>Health camp</span></button>
+            <button class="dashboard-room-button" data-strategy-room="accessibility"><span>Access lab</span></button>
+          </div>
+          <article class="dashboard-panel" data-strategy-room="seller" aria-live="polite">
+            <div class="dashboard-scene" aria-hidden="true">
+              <div class="dashboard-window">
+                <i></i><i></i><i></i>
+                <strong></strong>
+              </div>
+              <div class="dashboard-graph"><span></span><span></span><span></span></div>
+              <div class="dashboard-user"></div>
+            </div>
+            <span id="strategy-kicker">Seller hub</span>
+            <h3 id="strategy-title">A platform can grow and still leave people behind.</h3>
+            <p id="strategy-story">A seller dashboard is redesigned for speed, but smaller sellers are confused by jargon, navigation, and support flows. The overall engagement metric rises, but the new-user experience is uneven.</p>
+            <div class="strategy-meta">
+              <div>
+                <strong>Metric shown</strong>
+                <p id="strategy-metric">Engagement is up, but support tickets from newer sellers are rising.</p>
+              </div>
+              <div>
+                <strong>Hidden DEI risk</strong>
+                <p id="strategy-risk">Top-user data may overrepresent confident, digitally fluent sellers.</p>
+              </div>
+              <div>
+                <strong>Inclusive design move</strong>
+                <p id="strategy-fix">Test with new sellers, low digital-literacy users, and regional-language users before scaling.</p>
+              </div>
+              <div>
+                <strong>Reflection</strong>
+                <p id="strategy-reflection">Who has to work harder to use a system that was supposedly built for everyone?</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="strategy-games curated-hidden">
+          <article class="strategy-game-card">
+            <p class="eyebrow">Inclusive Strategy Simulator</p>
+            <h3 id="strategy-sim-title">A seller dashboard is technically correct, but many small sellers are confused.</h3>
+            <p id="strategy-sim-copy">You are leading a product and analytics team. Engagement looks fine overall, but support tickets from newer sellers are rising.</p>
+            <div class="strategy-options" aria-label="Strategy simulator choices">
+              <button class="strategy-choice" data-choice="fast">Ship a cleaner dashboard based only on top-user data.</button>
+              <button class="strategy-choice" data-choice="inclusive">Test with new sellers, low digital-literacy users, and regional-language users.</button>
+              <button class="strategy-choice" data-choice="support">Add a help center, but do not change the journey.</button>
+            </div>
+            <div class="strategy-game-result" aria-live="polite">
+              <span>DEI outcome</span>
+              <p id="strategy-sim-result">Choose a strategy to see who benefits and who may still be left out.</p>
+            </div>
+            <div class="puzzle-actions">
+              <button class="button secondary" id="strategy-next">New strategy scenario</button>
+            </div>
+          </article>
+
+          <article class="strategy-game-card">
+            <p class="eyebrow">Bias in the Dashboard</p>
+            <h3>What is missing from the metric story?</h3>
+            <p>The dashboard looks successful. Click the hidden gaps that could change the DEI interpretation.</p>
+            <div class="dashboard-mock" aria-label="Mock dashboard with hidden DEI gaps">
+              <button class="dashboard-tile" data-gap="language"><span>Engagement</span><strong>+22%</strong></button>
+              <button class="dashboard-tile" data-gap="access"><span>Retention</span><strong>+8%</strong></button>
+              <button class="dashboard-tile" data-gap="feedback"><span>NPS</span><strong>72</strong></button>
+              <button class="dashboard-tile" data-gap="support"><span>Tickets</span><strong>-14%</strong></button>
+            </div>
+            <div class="strategy-game-result" aria-live="polite">
+              <span>Dashboard insight</span>
+              <p id="dashboard-result">Click a metric to reveal the inclusion question hiding behind it.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="strategy-question">
+          <span>Reflection prompt</span>
+          <p>When a leader builds a product, dashboard, healthcare strategy, or volunteer program, whose barriers are being measured, and whose are still invisible?</p>
+        </div>
+      </section>
+
+      <section class="section muted curated-hidden" id="day-shoes">
+        <div class="section-heading">
+          <p class="eyebrow">A day in my shoes</p>
+          <h2>DEI is hundreds of tiny decisions.</h2>
+          <p>Choose a moment from my journey. Each choice reveals why inclusion is not just a policy; it is how people are treated when uncertainty, power, and pressure show up.</p>
+        </div>
+
+        <div class="journey-layout">
+          <article class="journey-card">
+            <p class="eyebrow" id="journey-kicker">New country, new classroom</p>
+            <h3 id="journey-title">You are trying to belong while learning the hidden rules.</h3>
+            <p id="journey-story">You understand the work, but not always the cultural shorthand, confidence codes, or unspoken expectations in the room.</p>
+            <div class="journey-choices">
+              <button class="journey-choice" data-choice="ask">Ask for clarification, even if it feels vulnerable.</button>
+              <button class="journey-choice" data-choice="hide">Pretend everything is clear and figure it out alone.</button>
+            </div>
+            <div class="game-result" aria-live="polite">
+              <span>What this reveals</span>
+              <p id="journey-result">Choose a response to reveal the DEI lesson.</p>
+            </div>
+          </article>
+
+          <aside class="journey-menu" aria-label="Journey selector">
+            <button class="journey-step is-active" data-journey="classroom">New country, new classroom</button>
+            <button class="journey-step" data-journey="casework">Case manager moment</button>
+            <button class="journey-step" data-journey="shelter">Shelter manager moment</button>
+            <button class="journey-step" data-journey="mba">MBA leadership moment</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="letters">
+        <div class="section-heading">
+          <p class="eyebrow">What I wish people knew</p>
+          <h2>Short letters from the human side of DEI.</h2>
+          <p>These letters make the unessay more personal by speaking to the people and systems around inclusion.</p>
+        </div>
+
+        <div class="letters-grid">
+          <article class="letter-card">
+            <span>Dear Professor</span>
+            <p>Sometimes participation is shaped by confidence, accent, culture, trauma, money, or whether someone has been taught that their voice belongs. Inclusion begins when a classroom makes the hidden rules visible.</p>
+          </article>
+          <article class="letter-card">
+            <span>Dear Future Manager</span>
+            <p>Your team will remember what you tolerate under pressure. Equity is not only who you hire; it is who feels safe enough to disagree, ask for support, and be believed.</p>
+          </article>
+          <article class="letter-card">
+            <span>Dear Shelter Resident</span>
+            <p>You are not a problem to be managed. You are a person navigating systems, histories, losses, strengths, and hopes that may not be visible at the front desk.</p>
+          </article>
+          <article class="letter-card">
+            <span>Dear International Student</span>
+            <p>NeDEIng help does not mean you are behind. It may mean the room was designed around assumptions you were never given the chance to learn.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted" id="strategy-letters">
+        <div class="section-heading">
+          <p class="eyebrow">What strategy taught me</p>
+          <h2>Short letters from the systems side of DEI.</h2>
+          <p>These letters balance the frontline memoir by showing how inclusion also lives inside strategy, dashboards, product design, healthcare access, and leadership decisions.</p>
+        </div>
+
+        <div class="letters-grid">
+          <article class="letter-card">
+            <span>Dear Product Leader</span>
+            <p>A clean interface is not automatically an inclusive one. If only confident, digitally fluent users can navigate it, the design is still asking some people to work harder for the same access.</p>
+          </article>
+          <article class="letter-card">
+            <span>Dear Data Team</span>
+            <p>Dashboards can reveal barriers, but they can also hide them. Before trusting the average, ask whose feedback is missing, who could not respond, and which users disappeared before they were counted.</p>
+          </article>
+          <article class="letter-card">
+            <span>Dear Healthcare Strategist</span>
+            <p>Efficiency matters, but equity asks a second question: are we reaching the people who are easiest to reach, or the people who face the greatest barriers to care?</p>
+          </article>
+          <article class="letter-card">
+            <span>Dear Future Consultant</span>
+            <p>Good strategy is not only clever. It is responsible. The best recommendation should explain who benefits, who carries the cost, and what voices need to be included before scaling the solution.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted curated-hidden" id="humans-smith">
+        <div class="section-heading">
+          <p class="eyebrow">Humans of Smith</p>
+          <h2>Composite DEI stories from the people we learn beside.</h2>
+          <p>Inspired by Humans of New York, these short story cards are fictionalized composites. They protect privacy while making DEI feel human, local, and emotionally memorable.</p>
+        </div>
+
+        <div class="humans-grid">
+          <article class="human-card">
+            <div class="human-portrait" aria-hidden="true">
+              <span>1</span>
+            </div>
+            <div>
+              <p class="eyebrow">The international student</p>
+              <h3>"I was not quiet because I had nothing to say."</h3>
+              <p>I was translating the question, the accent, the expectation, and the fear of sounding less capable all at once. Inclusion looked like a professor naming the hidden rules and giving different ways to participate.</p>
+              <strong>DEI lens: language access, belonging, cultural humility.</strong>
+            </div>
+          </article>
+          <article class="human-card">
+            <div class="human-portrait" aria-hidden="true">
+              <span>2</span>
+            </div>
+            <div>
+              <p class="eyebrow">The shelter resident</p>
+              <h3>"I needed safety before I could make a plan."</h3>
+              <p>People kept asking about goals, but I was still sleeping with one eye open. Trauma-informed care meant someone slowed down, believed me, and helped me feel safe enough to choose my next step.</p>
+              <strong>DEI lens: trauma, gender-based violence, dignity.</strong>
+            </div>
+          </article>
+          <article class="human-card">
+            <div class="human-portrait" aria-hidden="true">
+              <span>3</span>
+            </div>
+            <div>
+              <p class="eyebrow">The frontline worker</p>
+              <h3>"Care work is skilled work."</h3>
+              <p>De-escalating a crisis, noticing overdose risk, documenting harm, holding boundaries, and still speaking with respect takes training and emotional labour. Equity includes the staff trying to keep people alive.</p>
+              <strong>DEI lens: labour equity, psychological safety, respect.</strong>
+            </div>
+          </article>
+          <article class="human-card">
+            <div class="human-portrait" aria-hidden="true">
+              <span>4</span>
+            </div>
+            <div>
+              <p class="eyebrow">The person in recovery</p>
+              <h3>"Relapse was treated like failure, not information."</h3>
+              <p>When people saw addiction as a moral issue, I hid. When someone saw it as health, pain, survival, and context, I could be honest enough to ask for help.</p>
+              <strong>DEI lens: harm reduction, stigma, access to care.</strong>
+            </div>
+          </article>
+          <article class="human-card">
+            <div class="human-portrait" aria-hidden="true">
+              <span>5</span>
+            </div>
+            <div>
+              <p class="eyebrow">The class teammate</p>
+              <h3>"My disability was not the problem. The format was."</h3>
+              <p>The assignment became possible when options were flexible: written, spoken, visual, collaborative, or quiet. Accessibility did not lower the standard; it widened the doorway.</p>
+              <strong>DEI lens: disability justice, universal design, flexibility.</strong>
+            </div>
+          </article>
+          <article class="human-card">
+            <div class="human-portrait" aria-hidden="true">
+              <span>6</span>
+            </div>
+            <div>
+              <p class="eyebrow">The future manager</p>
+              <h3>"I learned that advocacy is not a personality trait."</h3>
+              <p>It is a practice: asking who is missing, sharing power, documenting patterns, interrupting harm, and staying accountable after the meeting ends.</p>
+              <strong>DEI lens: allyship, accountability, leadership.</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="voices-india">
+        <div class="section-heading">
+          <p class="eyebrow">Voices across India and Canada</p>
+          <h2>Real people, different places, one question: what does DEI mean in everyday life?</h2>
+          <p>This section adds community voices from India and Canada: students, school educators, a school principal, a psychologist, a law professional, a shelter/city case manager, an ER nurse who is also an MBA student, a queer youth-support worker, a software engineer, and an MBA student with a supply chain background. Use the videos and audio as a listening circle: watch, listen, notice, connect, and reflect.</p>
+        </div>
+
+        <aside class="voice-ethics">
+          <span>Ethics of listening</span>
+          <p>These voices are included as shared perspectives, not as proof that one person can represent a whole community. The goal is to listen across lived experience and professional roles while protecting dignity, consent, and context.</p>
+        </aside>
+
+        <div class="voices-grid">
+          <div class="country-voice-column india-voices">
+            <div class="country-voice-heading">
+              <span>India</span>
+              <h3>Classrooms, mental health, law, and belonging</h3>
+            </div>
+          <article class="voice-card">
+            <video controls preload="metadata">
+              <source src="file:///C:/Users/shiva/Downloads/WhatsApp%20Video%202026-07-20%20at%206.53.29%20PM.mp4" type="video/mp4">
+            </video>
+            <div>
+              <p class="eyebrow">India voice 01 - student</p>
+              <h3>Belonging from a student lens</h3>
+              <p>This student perspective shows how young people understand fairness, respect, opportunity, and whether school feels like a place where their voice matters.</p>
+              <ul class="voice-takeaways">
+                <li>DEI begins early, in the everyday signals students receive about whose voice matters.</li>
+                <li>Belonging is shaped by peers, teachers, confidence, and access to encouragement.</li>
+              </ul>
+              <strong>Reflection: What does this student need from teachers, classmates, or systems to feel included?</strong>
+            </div>
+          </article>
+          <article class="voice-card">
+            <video controls preload="metadata">
+              <source src="file:///C:/Users/shiva/Downloads/WhatsApp%20Video%202026-07-20%20at%206.52.06%20PM.mp4" type="video/mp4">
+            </video>
+            <div>
+              <p class="eyebrow">India voice 02 - school teacher</p>
+              <h3>Inclusion inside the classroom</h3>
+              <p>The teacher perspective connects DEI to daily classroom practice: who is encouraged, who is noticed, how difference is handled, and how care becomes part of learning.</p>
+              <ul class="voice-takeaways">
+                <li>Educators can make inclusion practical through language, expectations, examples, and participation norms.</li>
+                <li>Classroom care becomes equity when quieter or marginalized students are supported by design.</li>
+              </ul>
+              <strong>Reflection: What can a teacher do tomorrow to make participation safer and more equitable?</strong>
+            </div>
+          </article>
+          <article class="voice-card">
+            <video controls preload="metadata">
+              <source src="file:///C:/Users/shiva/Downloads/WhatsApp%20Video%202026-07-20%20at%2010.36.15%20AM.mp4" type="video/mp4">
+            </video>
+            <div>
+              <p class="eyebrow">India voice 03 - student</p>
+              <h3>Another student perspective</h3>
+              <p>A second student voice helps show that young people are not a single group. Their views of DEI can differ based on school culture, confidence, access, identity, and lived experience.</p>
+              <ul class="voice-takeaways">
+                <li>Listening to more than one student prevents a single story from becoming the whole story.</li>
+                <li>DEI needs comparison, curiosity, and room for difference within the same age group.</li>
+              </ul>
+              <strong>Reflection: What is similar or different between the two student voices?</strong>
+            </div>
+          </article>
+          <article class="voice-card">
+            <video controls preload="metadata">
+              <source src="file:///C:/Users/shiva/Downloads/WhatsApp%20Video%202026-07-20%20at%207.37.02%20AM.mp4" type="video/mp4">
+            </video>
+            <div>
+              <p class="eyebrow">India voice 04 - school principal</p>
+              <h3>Leadership and school culture</h3>
+              <p>The principal perspective widens the lens from one classroom to the whole school: policies, expectations, safety, discipline, language, family engagement, and belonging.</p>
+              <ul class="voice-takeaways">
+                <li>Leadership turns values into routines, policies, and school-wide expectations.</li>
+                <li>Inclusion is stronger when family, language, safety, and discipline are part of the same conversation.</li>
+              </ul>
+              <strong>Reflection: How does leadership shape whether inclusion is a value or a daily practice?</strong>
+            </div>
+          </article>
+          <article class="voice-card">
+            <video controls preload="metadata">
+              <source src="assets/india-psychologist-voice.mp4" type="video/mp4">
+            </video>
+            <div>
+              <p class="eyebrow">India voice 05 - psychologist</p>
+              <h3>DEI, mental health, and invisible barriers</h3>
+              <p>The psychologist perspective adds a mental health lens to DEI: stigma, emotional safety, identity, family expectations, trauma, confidence, and whether people feel safe enough to ask for support before they reach crisis.</p>
+              <ul class="voice-takeaways">
+                <li>Mental health is an DEI issue because stigma can silence needs before support is offered.</li>
+                <li>Invisible barriers still shape access, confidence, safety, and participation.</li>
+              </ul>
+              <strong>Reflection: What becomes visible when inclusion includes mental health, not only visible identity or policy language?</strong>
+            </div>
+          </article>
+          <article class="voice-card">
+            <video controls preload="metadata">
+              <source src="assets/india-law-professional-voice.mp4" type="video/mp4">
+            </video>
+            <div>
+              <p class="eyebrow">India voice 06 - law professional</p>
+              <h3>DEI through rights, fairness, and access</h3>
+              <p>The law professional perspective connects DEI to rights, dignity, representation, discrimination, access to justice, and how rules can either protect people or create barriers when systems are hard to understand or navigate.</p>
+              <ul class="voice-takeaways">
+                <li>Equity depends on whether people understand and can use the protections available to them.</li>
+                <li>Rules are not neutral if only some people can navigate them with confidence.</li>
+              </ul>
+              <strong>Reflection: How does equity change when legal knowledge, protection, and voice are accessible to the people most affected?</strong>
+            </div>
+          </article>
+          </div>
+          <div class="country-voice-column canada-voices">
+            <div class="country-voice-heading">
+              <span>Canada</span>
+              <h3>Care systems, identity, technology, and operations</h3>
+            </div>
+          <article class="voice-card voice-card-wide">
+            <video controls preload="metadata">
+              <source src="file:///C:/Users/shiva/Downloads/WhatsApp%20Video%202026-07-21%20at%201.47.33%20PM.mp4" type="video/mp4">
+            </video>
+            <div>
+              <p class="eyebrow">Canada voice 01 - shelter and city case manager</p>
+              <h3>DEI in housing, shelter, and public systems</h3>
+              <p>This Canadian perspective connects DEI to frontline case management, shelter work, and city systems, where fairness often depends on access, documentation, safety, trauma-informed care, and how services respond to crisis.</p>
+              <ul class="voice-takeaways">
+                <li>Public systems become more equitable when they treat missed steps as barrier signals.</li>
+                <li>Housing, documentation, safety, and trauma-informed care are deeply connected.</li>
+              </ul>
+              <strong>Reflection: What barriers become visible when DEI is viewed through shelter and city services?</strong>
+            </div>
+          </article>
+          <article class="voice-card voice-card-wide">
+            <video controls preload="metadata">
+              <source src="file:///C:/Users/shiva/Downloads/Movie%20on%202026-07-21%20at%206.13%20PM.mov" type="video/quicktime">
+            </video>
+            <div>
+              <p class="eyebrow">Canada voice 02 - ER nurse and MBA student</p>
+              <h3>DEI in healthcare and leadership learning</h3>
+              <p>This voice connects emergency nursing with MBA learning, bringing together healthcare access, patient dignity, teamwork, leadership, and the pressure of making equitable decisions in fast-moving environments.</p>
+              <ul class="voice-takeaways">
+                <li>Urgency does not remove the need for dignity, language access, and culturally aware care.</li>
+                <li>Leadership matters most when decisions are fast, stressful, and unequal in impact.</li>
+              </ul>
+              <strong>Reflection: What does DEI require when care, urgency, and leadership meet?</strong>
+            </div>
+          </article>
+          <article class="voice-card voice-card-wide voice-audio-card">
+            <div class="anonymous-portrait" aria-label="Anonymous illustrated portrait of a teacher">
+              <span class="portrait-initials">T</span>
+              <span class="portrait-line"></span>
+              <span class="portrait-line short"></span>
+            </div>
+            <div>
+              <p class="eyebrow">Canada voice 03 - Toronto school teacher</p>
+              <h3>DEI through the eyes of a classroom educator</h3>
+              <p>This anonymous voice adds a Canadian school perspective from a 30-year-old woman working as a teacher in Toronto. It connects DEI to classroom belonging, student confidence, representation, language, family context, and how educators make safety visible in everyday interactions.</p>
+              <audio controls preload="metadata">
+                <source src="assets/canada-teacher-toronto-voice.ogg" type="audio/ogg">
+              </audio>
+              <ul class="voice-takeaways">
+                <li>Inclusion is felt through daily educator choices, not only formal policy.</li>
+                <li>Students bring family, language, identity, and confidence into the classroom with them.</li>
+              </ul>
+              <strong>Reflection: How does inclusion change when teachers treat difference as context for support, not as a problem to manage?</strong>
+            </div>
+          </article>
+          <article class="voice-card voice-card-wide">
+            <video controls preload="metadata">
+              <source src="assets/canada-queer-youth-worker-voice.mp4" type="video/mp4">
+            </video>
+            <div>
+              <p class="eyebrow">Canada voice 04 - queer youth-support worker</p>
+              <h3>Identity, safety, and everyday belonging</h3>
+              <p>This voice adds the perspective of a gender-fluid queer person in Canada who works with young women in transition. Their response connects DEI to a lived question: how gender, sexuality, culture, race, religion, disability, or other parts of identity can shape work, safety, trust, and everyday life.</p>
+              <ul class="voice-takeaways">
+                <li>Identity shapes how safety, trust, and respect are experienced in ordinary spaces.</li>
+                <li>Support work must make room for complexity instead of asking people to simplify themselves.</li>
+              </ul>
+              <strong>Reflection: What changes when workplaces and support systems expect identity to shape experience, instead of treating identity as separate from the person?</strong>
+            </div>
+          </article>
+          <article class="voice-card voice-card-wide">
+            <video controls preload="metadata">
+              <source src="assets/canada-software-engineer-voice.mp4" type="video/mp4">
+            </video>
+            <div>
+              <p class="eyebrow">Canada voice 05 - software engineer</p>
+              <h3>DEI in technology, design, and digital systems</h3>
+              <p>The software engineering perspective connects DEI to the choices built into technology: whose needs are considered, whose data is missing, whether tools are accessible, and how design decisions can either reduce or reproduce barriers.</p>
+              <ul class="voice-takeaways">
+                <li>Technology reflects assumptions about users, language, access, ability, and data.</li>
+                <li>Inclusive design asks who is missing before a product becomes normal.</li>
+              </ul>
+              <strong>Reflection: What would change if every digital product asked who might be excluded before it was built?</strong>
+            </div>
+          </article>
+          <article class="voice-card voice-card-wide">
+            <video controls preload="metadata">
+              <source src="assets/canada-mba-supply-chain-voice.mov" type="video/quicktime">
+            </video>
+            <div>
+              <p class="eyebrow">Canada voice 06 - MBA student, supply chain background</p>
+              <h3>DEI in operations, access, and resource flow</h3>
+              <p>This Canadian MBA voice adds a supply chain lens to DEI: how resources move, who is prioritized, who waits, whose needs are forecasted, and how planning decisions can either create access or deepen inequity.</p>
+              <ul class="voice-takeaways">
+                <li>Operations decisions are equity decisions when they affect who receives resources first.</li>
+                <li>Planning becomes inclusive when shortages, delays, and service gaps are anticipated through the most affected users.</li>
+              </ul>
+              <strong>Reflection: What would a more equitable supply chain notice before a shortage, delay, or service gap reaches the people most affected?</strong>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section curated-hidden" id="mind-map">
+        <div class="split-feature">
+          <div class="feature-copy">
+            <p class="eyebrow">Mind mapping</p>
+            <h2>Love as a serious DEI practice.</h2>
+            <p>
+              Inspired by bell hooks' framing of love as an active ethic, this map turns care into concrete behaviors: commitment, trust, responsibility, respect, and knowledge.
+            </p>
+            <div class="concept-map" aria-label="Love as DEI practice concepts">
+              <span>Care</span>
+              <span>Commitment</span>
+              <span>Trust</span>
+              <span>Responsibility</span>
+              <span>Respect</span>
+              <span>Knowledge</span>
+            </div>
+          </div>
+          <figure class="picture-frame">
+            <img src="assets/equity-mind-map.png" alt="Illustrated tabletop equity mind map with sticky notes and connecting lines">
+          </figure>
+        </div>
+      </section>
+
+      <section class="section muted" id="DEI-lab">
+        <div class="section-heading">
+          <p class="eyebrow">DEI learning lab</p>
+          <h2>Core ideas, community care, and practical tools.</h2>
+          <p>Use these tabs as a focused guide to equity, equality, allyship, accessibility, and the everyday design of belonging.</p>
+        </div>
+
+        <div class="lab-tabs" role="tablist" aria-label="DEI information tabs">
+          <button class="lab-tab is-active" id="lab-tab-basics" role="tab" aria-selected="true" aria-controls="lab-panel-basics" data-lab="basics">DEI basics</button>
+          <button class="lab-tab" id="lab-tab-equity" role="tab" aria-selected="false" aria-controls="lab-panel-equity" data-lab="equity">Equity vs equality</button>
+          <button class="lab-tab curated-hidden" id="lab-tab-lgbtq" role="tab" aria-selected="false" aria-controls="lab-panel-lgbtq" data-lab="lgbtq">LGBTQ+</button>
+          <button class="lab-tab curated-hidden" id="lab-tab-global" role="tab" aria-selected="false" aria-controls="lab-panel-global" data-lab="global">Global DEI</button>
+          <button class="lab-tab curated-hidden" id="lab-tab-research" role="tab" aria-selected="false" aria-controls="lab-panel-research" data-lab="research">Research</button>
+          <button class="lab-tab curated-hidden" id="lab-tab-mDEIa" role="tab" aria-selected="false" aria-controls="lab-panel-mDEIa" data-lab="mDEIa">MDEIa</button>
+          <button class="lab-tab" id="lab-tab-allyship" role="tab" aria-selected="false" aria-controls="lab-panel-allyship" data-lab="allyship">Allyship</button>
+          <button class="lab-tab" id="lab-tab-access" role="tab" aria-selected="false" aria-controls="lab-panel-access" data-lab="access">Accessibility</button>
+          <button class="lab-tab curated-hidden" id="lab-tab-tools" role="tab" aria-selected="false" aria-controls="lab-panel-tools" data-lab="tools">Toolbox</button>
+        </div>
+
+        <div class="lab-panel is-active" id="lab-panel-basics" role="tabpanel" aria-labelledby="lab-tab-basics">
+          <div class="info-grid three">
+            <article class="info-card">
+              <span>Equity</span>
+              <h3>Different support for fair access.</h3>
+              <p>Equity notices barriers and adjusts resources, rules, and opportunities so people can participate meaningfully.</p>
+            </article>
+            <article class="info-card">
+              <span>Diversity</span>
+              <h3>Difference is present.</h3>
+              <p>Diversity includes race, gender, sexuality, disability, class, language, religion, age, culture, migration, neurodiversity, and lived experience.</p>
+            </article>
+            <article class="info-card">
+              <span>Inclusion</span>
+              <h3>Difference has influence.</h3>
+              <p>Inclusion means people are not just invited in; they can shape decisions, be safe enough to contribute, and see follow-through.</p>
+            </article>
+          </div>
+          <div class="callout-strip">
+            <strong>Quick test:</strong>
+            <span>If the same people always adapt, explain, translate, or absorb discomfort, the space may be diverse without being equitable or inclusive.</span>
+          </div>
+        </div>
+
+        <div class="lab-panel" id="lab-panel-equity" role="tabpanel" aria-labelledby="lab-tab-equity" hidden>
+          <div class="split-feature">
+            <div class="feature-copy">
+              <p class="eyebrow">Equity vs equality</p>
+              <h2>Same support is not always fair support.</h2>
+              <p>Equality gives everyone the same thing. Equity asks what each person needs to reach a fair chance of participation, safety, and success.</p>
+              <div class="compare-list">
+                <div>
+                  <span>Equality asks</span>
+                  <p>Did everyone receive the same resource?</p>
+                </div>
+                <div>
+                  <span>Equity asks</span>
+                  <p>Did the resource reduce the barrier?</p>
+                </div>
+                <div>
+                  <span>Justice asks</span>
+                  <p>Why does the barrier exist, and how can the system change?</p>
+                </div>
+              </div>
+            </div>
+            <figure class="picture-frame">
+              <img src="assets/equity-vs-equality.png" alt="Illustration comparing identical support with needs-based support for full participation">
+            </figure>
+          </div>
+        </div>
+
+        <div class="lab-panel curated-hidden" id="lab-panel-lgbtq" role="tabpanel" aria-labelledby="lab-tab-lgbtq" hidden>
+          <div class="split-feature">
+            <figure class="picture-frame">
+              <img src="assets/lgbtq-inclusion.png" alt="Illustration of LGBTQ+ people and allies sharing resources in a welcoming learning circle">
+            </figure>
+            <div class="feature-copy">
+              <p class="eyebrow">LGBTQ+ inclusion</p>
+              <h2>Belonging is built before someone has to ask for it.</h2>
+              <p>LGBTQ+ inclusion means people of all sexual orientations, gender identities, and gender expressions can participate without hiding, explaining, or defending who they are.</p>
+              <ul class="check-list">
+                <li>Use names and pronouns people share, and correct mistakes briefly.</li>
+                <li>Avoid assumptions about partners, families, bodies, or gender expression.</li>
+                <li>Make forms, washrooms, dress codes, examples, and policies inclusive.</li>
+                <li>Respond to jokes, misgendering, outing, and exclusion as safety issues.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="lab-panel curated-hidden" id="lab-panel-global" role="tabpanel" aria-labelledby="lab-tab-global" hidden>
+          <div class="split-feature">
+            <div class="feature-copy">
+              <p class="eyebrow">Global DEI</p>
+              <h2>DEI looks different across places, but the practice travels.</h2>
+              <p>Globally, DEI is not one script. It changes across histories, laws, languages, migration, colonial contexts, disability access, gender norms, and local communities.</p>
+              <div class="compare-list">
+                <div>
+                  <span>Local context</span>
+                  <p>Ask what exclusion looks like here, who defines the problem, and which histories shape trust.</p>
+                </div>
+                <div>
+                  <span>Shared practice</span>
+                  <p>Across settings, people need safety, voice, fair access, accountable leadership, and resources matched to barriers.</p>
+                </div>
+                <div>
+                  <span>Global humility</span>
+                  <p>Avoid exporting one model. Learn from community-led approaches and adapt with people, not for them.</p>
+                </div>
+              </div>
+            </div>
+            <figure class="picture-frame">
+              <img src="assets/global-DEI-map.png" alt="Illustration of connected communities practicing DEI around the world">
+            </figure>
+          </div>
+        </div>
+
+        <div class="lab-panel curated-hidden" id="lab-panel-research" role="tabpanel" aria-labelledby="lab-tab-research" hidden>
+          <div class="info-grid three">
+            <article class="info-card">
+              <span>Intersectionality</span>
+              <h3>People experience systems together, not one identity at a time.</h3>
+              <p>Use intersectionality to ask how race, gender, sexuality, disability, class, migration, language, and age interact in real settings.</p>
+            </article>
+            <article class="info-card">
+              <span>Bias research</span>
+              <h3>Bias shows up in ordinary decisions.</h3>
+              <p>The IDEA toolkit highlights explicit and implicit bias, affinity bias, stereotypes, groupthink, and discrimination as barriers to fair participation.</p>
+            </article>
+            <article class="info-card">
+              <span>Representation</span>
+              <h3>Who is visible changes what feels possible.</h3>
+              <p>The WISEST toolkit connects DEI learning to representation, underrepresentation, and the importance of showing girls and gender minorities that STEM can be for them.</p>
+            </article>
+          </div>
+          <div class="research-strip">
+            <span>Research-paper prompt</span>
+            <p>Pick one DEI barrier, summarize evidence for why it matters, then design one small intervention and one way to evaluate whether it worked.</p>
+          </div>
+        </div>
+
+        <div class="lab-panel curated-hidden" id="lab-panel-mDEIa" role="tabpanel" aria-labelledby="lab-tab-mDEIa" hidden>
+          <div class="mDEIa-study-grid">
+            <article>
+              <span>Films</span>
+              <h3>Use scenes as mirrors.</h3>
+              <p>From Berkeley's anti-racism mDEIa list, films such as <em>13th</em>, <em>I Am Not Your Negro</em>, and <em>The Death and Life of Marsha P. Johnson</em> can open discussion about systems, history, identity, and justice.</p>
+            </article>
+            <article>
+              <span>Podcasts</span>
+              <h3>Let stories complicate simple answers.</h3>
+              <p>Podcasts like <em>Code Switch</em>, <em>All My Relations</em>, <em>Who Belongs</em>, and <em>Seeing White</em> invite ongoing learning through conversation, history, and lived experience.</p>
+            </article>
+            <article>
+              <span>Movie scenes</span>
+              <h3>Pause the plot and ask DEI questions.</h3>
+              <p>Instead of quoting long dialogue, analyze a short scene: who has power, who is believed, who is interrupted, what barrier is invisible, and what repair is possible?</p>
+            </article>
+          </div>
+          <div class="scene-prompts">
+            <button class="button primary" id="scene-prompt-button">Shuffle scene prompt</button>
+            <p id="scene-prompt" aria-live="polite"></p>
+          </div>
+          <p class="source-note">MDEIa list inspired by Berkeley Executive Education anti-racism resources: films, videos, and podcasts.</p>
+        </div>
+
+        <div class="lab-panel" id="lab-panel-allyship" role="tabpanel" aria-labelledby="lab-tab-allyship" hidden>
+          <div class="ally-path">
+            <article class="info-card">
+              <span>1. Learn</span>
+              <h3>Build awareness before harm happens.</h3>
+              <p>Toolkit idea: complete training, learn shared definitions, and understand how bias, discrimination, stereotypes, racism, and groupthink shape everyday decisions.</p>
+            </article>
+            <article class="info-card">
+              <span>2. Listen</span>
+              <h3>Believe impact and notice patterns.</h3>
+              <p>Being empathetic means listening for what people are carrying: exclusion, extra emotional labour, repeated interruptions, name bias, accent bias, or pressure to represent a whole group.</p>
+            </article>
+            <article class="info-card">
+              <span>3. Advocate</span>
+              <h3>Change the process, not just the mood.</h3>
+              <p>Advocacy can mean improving outreach, removing gendered language, sharing mentoring labour, checking workload, and making sure historically excluded people are not only included symbolically.</p>
+            </article>
+            <article class="info-card">
+              <span>4. Repair</span>
+              <h3>Follow through visibly.</h3>
+              <p>Allyship is measured by changed conditions: safer reporting paths, accessible participation, fairer evaluation, and repeat scans when leadership, staffing, or programs change.</p>
+            </article>
+          </div>
+          <div class="callout-strip">
+            <strong>Allyship test:</strong>
+            <span>Would this action still help if nobody praised you for doing it?</span>
+          </div>
+        </div>
+
+        <div class="lab-panel" id="lab-panel-access" role="tabpanel" aria-labelledby="lab-tab-access" hidden>
+          <div class="access-grid">
+            <article>
+              <span>Before</span>
+              <p>Share agendas, location details, timing, cost, sensory conditions, and ways to request accommodations.</p>
+            </article>
+            <article>
+              <span>During</span>
+              <p>Use captions, plain language, breaks, multiple ways to participate, and visible norms for respectful dialogue.</p>
+            </article>
+            <article>
+              <span>After</span>
+              <p>Send notes, invite feedback, compensate lived expertise when possible, and show what changed.</p>
+            </article>
+          </div>
+          <div class="callout-strip">
+            <strong>Access is not a favour.</strong>
+            <span>It is part of good design, risk prevention, and respect.</span>
+          </div>
+        </div>
+
+        <div class="lab-panel curated-hidden" id="lab-panel-tools" role="tabpanel" aria-labelledby="lab-tab-tools" hidden>
+          <div class="toolkit-grid">
+            <article>
+              <span>Language check</span>
+              <h3>Who is centered?</h3>
+              <p>Review words, examples, images, job posts, letters, and evaluation forms for stereotypes, assumptions, gendered language, and missing voices.</p>
+            </article>
+            <article>
+              <span>Power check</span>
+              <h3>Who decides?</h3>
+              <p>Map who has authority, who has lived expertise, who carries risk, who gets interrupted, and who gets informed last.</p>
+            </article>
+            <article>
+              <span>Barrier check</span>
+              <h3>Who has to work harder?</h3>
+              <p>Look for cost, time, paperwork, language, technology, transportation, stigma, and safety barriers.</p>
+            </article>
+            <article>
+              <span>Workload check</span>
+              <h3>Who is carrying inclusion work?</h3>
+              <p>Watch for tokenism and unequal service work. Share committee, mentoring, emotional, and educational labour fairly.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section curated-hidden" id="gallery">
+        <div class="section-heading">
+          <p class="eyebrow">Poster wall</p>
+          <h2>Six visual anchors for the unessay.</h2>
+          <p>A smaller gallery keeps the page visual without making it feel like a separate museum. Each poster gives one conversation starter.</p>
+        </div>
+
+        <div class="gallery-filters" aria-label="Gallery filters">
+          <button class="gallery-filter is-active" data-gallery-filter="all">All</button>
+          <button class="gallery-filter" data-gallery-filter="allyship">Allyship</button>
+          <button class="gallery-filter" data-gallery-filter="lgbtq">LGBTQ+</button>
+          <button class="gallery-filter" data-gallery-filter="access">Accessibility</button>
+          <button class="gallery-filter" data-gallery-filter="global">Global</button>
+          <button class="gallery-filter" data-gallery-filter="equity">Equity</button>
+        </div>
+
+        <div class="poster-gallery">
+          <article class="poster-card" data-gallery-topic="allyship">
+            <img src="assets/poster-allyship.png" alt="Poster-style illustration about active allyship, advocacy, listening, and barrier removal">
+            <div>
+              <span>Allyship</span>
+              <h3>Allyship is a practice, not a personality.</h3>
+              <p>Reflection: What power, access, or crDEIbility can you use to reduce someone else's burden?</p>
+            </div>
+          </article>
+          <article class="poster-card" data-gallery-topic="lgbtq">
+            <img src="assets/poster-lgbtq-belonging.png" alt="Poster-style illustration about LGBTQ+ belonging, safer spaces, chosen family, and pronoun respect">
+            <div>
+              <span>LGBTQ+ belonging</span>
+              <h3>Belonging starts before disclosure.</h3>
+              <p>Reflection: What signals tell people they can be safe without having to test the room first?</p>
+            </div>
+          </article>
+          <article class="poster-card" data-gallery-topic="access">
+            <img src="assets/poster-accessibility-care.png" alt="Poster-style illustration about accessibility, flexible design, and community care">
+            <div>
+              <span>Accessibility</span>
+              <h3>Access is good design.</h3>
+              <p>Reflection: What could be made easier before someone has to ask for an accommodation?</p>
+            </div>
+          </article>
+          <article class="poster-card" data-gallery-topic="global">
+            <img src="assets/global-DEI-map.png" alt="Illustration of connected communities practicing DEI around the world">
+            <div>
+              <span>Global DEI</span>
+              <h3>DEI travels through local context.</h3>
+              <p>Reflection: What changes when inclusion is designed with community knowledge instead of imported as a template?</p>
+            </div>
+          </article>
+          <article class="poster-card" data-gallery-topic="equity">
+            <img src="assets/equity-vs-equality.png" alt="Illustration comparing identical support with needs-based support for full participation">
+            <div>
+              <span>Equity</span>
+              <h3>Fair is not always equal.</h3>
+              <p>Reflection: Where are we giving everyone the same thing when barriers are different?</p>
+            </div>
+          </article>
+          <article class="poster-card" data-gallery-topic="lgbtq allyship">
+            <img src="assets/lgbtq-inclusion.png" alt="Illustration of LGBTQ+ people and allies sharing resources in a welcoming learning circle">
+            <div>
+              <span>Community care</span>
+              <h3>Inclusion is built through repeated signals.</h3>
+              <p>Reflection: Which small actions make respect visible before harm happens?</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted" id="unessay-note">
+        <div class="section-heading">
+          <p class="eyebrow">Evidence + course connection</p>
+          <h2>Why this website format fits the argument.</h2>
+          <p>This project uses the freedom of an unessay to make DEI active, memorable, and accessible. The format is part of the claim: inclusion is learned through listening, interaction, reflection, and design.</p>
+        </div>
+        <div class="rationale-grid">
+          <div class="course-concept-map" aria-label="Course concept map connecting theory, tools, voices, and design">
+            <div class="concept-core">DEI as design</div>
+            <div class="concept-node hooks-node">bell hooks<br><span>care + respect</span></div>
+            <div class="concept-node learning-node">Learning to learn<br><span>curiosity + vulnerability</span></div>
+            <div class="concept-node toolkit-node">Toolkits<br><span>access + practice</span></div>
+            <div class="concept-node evidence-node">Voices<br><span>lived evidence</span></div>
+          </div>
+          <article>
+            <span>bell hooks</span>
+            <h3>Love becomes a serious DEI practice.</h3>
+            <p>The site translates care, commitment, trust, responsibility, respect, and knowledge into decisions: how we respond to crisis, design access, listen to harm, and repair exclusion.</p>
+          </article>
+          <article>
+            <span>Learning to learn</span>
+            <h3>Learning requires humility.</h3>
+            <p>Aspiration, self-awareness, curiosity, and vulnerability appear throughout the project: games invite entry, simulations test assumptions, and voices require the viewer to listen before judging.</p>
+          </article>
+          <article>
+            <span>Toolkit evidence</span>
+            <h3>DEI is practical, not abstract.</h3>
+            <p>Ideas from the DEI toolkits show up as plain-language tools: accessibility checks, representation questions, allyship moves, inclusive language, power mapping, and barrier-focused design.</p>
+          </article>
+          <article>
+            <span>Lived + professional evidence</span>
+            <h3>Two lenses make the project fuller.</h3>
+            <p>Shivangi's frontline care lens and Vivek's strategy lens show that DEI belongs both in human service encounters and in the systems, dashboards, operations, and policies behind them.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section curated-hidden" id="DEI-scan">
+        <div class="section-heading">
+          <p class="eyebrow">DEI scan</p>
+          <h2>Scan the learning environment before you design the solution.</h2>
+          <p>Use this as a quick pulse check for a meeting, class activity, community program, or team conversation.</p>
+        </div>
+
+        <div class="scan-layout">
+          <figure class="picture-frame compact">
+            <img src="assets/learning-cycle.png" alt="Illustration of people engaging, reflecting, and exploring ideas together">
+          </figure>
+          <div class="scan-panel">
+            <div class="scan-control">
+              <label for="engagement">Engagement</label>
+              <input id="engagement" type="range" min="1" max="5" value="3">
+            </div>
+            <div class="scan-control">
+              <label for="reflection-score">Reflection</label>
+              <input id="reflection-score" type="range" min="1" max="5" value="3">
+            </div>
+            <div class="scan-control">
+              <label for="exploration">Exploration</label>
+              <input id="exploration" type="range" min="1" max="5" value="3">
+            </div>
+            <div class="scan-control">
+              <label for="care-score">Care and trust</label>
+              <input id="care-score" type="range" min="1" max="5" value="3">
+            </div>
+            <div class="scan-result" aria-live="polite">
+              <span>Suggested next move</span>
+              <p id="scan-result-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="learning-cards" aria-label="Learning to learn practices">
+          <article>
+            <span>Aspiration</span>
+            <p>Name why the learning matters before asking people to stretch.</p>
+          </article>
+          <article>
+            <span>Self-awareness</span>
+            <p>Notice defensiveness, expertise gaps, power, and the stories you bring into the room.</p>
+          </article>
+          <article>
+            <span>Curiosity</span>
+            <p>Ask better questions before moving to judgment, advice, or correction.</p>
+          </article>
+          <article>
+            <span>Vulnerability</span>
+            <p>Make uncertainty discussable so learning can happen without performance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted curated-hidden" id="role-path">
+        <div class="section-heading">
+          <p class="eyebrow">Choose your role</p>
+          <h2>DEI action changes depending on where you stand.</h2>
+          <p>Pick a role to see a tailored pathway. This makes the unessay useful for students, educators, managers, allies, and community workers.</p>
+        </div>
+
+        <div class="role-layout">
+          <div class="role-buttons" aria-label="Role pathway selector">
+            <button class="role-button is-active" data-role="student">Student</button>
+            <button class="role-button" data-role="educator">Educator</button>
+            <button class="role-button" data-role="manager">Manager</button>
+            <button class="role-button" data-role="ally">Ally</button>
+            <button class="role-button" data-role="community">Community worker</button>
+          </div>
+          <article class="role-panel" aria-live="polite">
+            <p class="eyebrow" id="role-kicker">Student</p>
+            <h3 id="role-title">Learn, notice, and make participation safer.</h3>
+            <p id="role-copy">Students can practice DEI by noticing who is included in examples, whose voices shape group work, and how classmates are supported when they name barriers.</p>
+            <ul id="role-actions" class="prompt-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted" id="ally-action">
+        <div class="section-heading">
+          <p class="eyebrow">Three ally moves</p>
+          <h2>Keep allyship simple enough to practice.</h2>
+          <p>Instead of another large toolkit, this section turns allyship into three repeatable moves that work across classrooms, shelters, healthcare, product teams, and leadership spaces.</p>
+        </div>
+
+        <div class="action-center-grid">
+          <article class="action-card">
+            <span>1. Notice</span>
+            <h3>Ask who is working harder to participate.</h3>
+            <p>Look for hidden barriers in forms, classrooms, shelter rules, dashboards, meetings, healthcare pathways, language, timing, and access to support.</p>
+          </article>
+          <article class="action-card">
+            <span>2. Shift</span>
+            <h3>Use your role to reduce the barrier.</h3>
+            <p>Change the process, share information, add options, explain jargon, improve accessibility, invite missing voices, and make the fix structural instead of personal.</p>
+          </article>
+          <article class="action-card">
+            <span>3. Repair</span>
+            <h3>Follow up when harm or exclusion is named.</h3>
+            <p>Listen for impact, acknowledge patterns, act without making the harmed person educate everyone, and show what changed because feedback was trusted.</p>
+          </article>
+        </div>
+
+        <div class="checklist-builder curated-hidden">
+          <div>
+            <p class="eyebrow">Build a 3-step allyship plan</p>
+            <h3>Choose what you will do next.</h3>
+          </div>
+          <label>
+            Awareness move
+            <select id="ally-learn">
+              <option>complete DEI training and discuss one bias pattern with my group</option>
+              <option>learn shared definitions for IDEA and explain them in plain language</option>
+              <option>review one toolkit resource and bring it into a meeting or class</option>
+            </select>
+          </label>
+          <label>
+            Advocacy move
+            <select id="ally-advocate">
+              <option>audit language in a posting, slide deck, rubric, or email</option>
+              <option>ask who is missing from a decision before it is finalized</option>
+              <option>share mentoring, committee, or service work more fairly</option>
+            </select>
+          </label>
+          <label>
+            Empathy move
+            <select id="ally-empathy">
+              <option>listen for impact and ask what support would help now</option>
+              <option>interrupt a biased comment without making the harmed person respond</option>
+              <option>follow up privately and then fix the public pattern</option>
+            </select>
+          </label>
+          <div class="pledge toolkit-pledge" aria-live="polite">
+            <span>Allyship plan</span>
+            <p id="ally-plan-text"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="so-what">
+        <div class="section-heading">
+          <p class="eyebrow">So what?</p>
+          <h2>This unessay argues that DEI is not only awareness. It is design, care, and accountability.</h2>
+          <p>Across shelter work, healthcare, classrooms, product strategy, dashboards, operations, law, technology, and community voices, the same question keeps returning: are people being asked to overcome invisible barriers alone?</p>
+        </div>
+
+        <div class="so-what-grid">
+          <article>
+            <span>Care must become structure</span>
+            <h3>Good intentions are not enough.</h3>
+            <p>Care becomes DEI when it changes rules, routines, access points, safety practices, and how people are treated when they are under pressure.</p>
+          </article>
+          <article>
+            <span>Data must include missing voices</span>
+            <h3>Averages can hide exclusion.</h3>
+            <p>Dashboards, surveys, and feedback systems only support equity when they ask who could not respond, who left early, and who was never counted.</p>
+          </article>
+          <article>
+            <span>Inclusion must be tested</span>
+            <h3>Belonging is proven through experience.</h3>
+            <p>The real test is whether people with different identities, barriers, roles, and histories can access the system with dignity and choice.</p>
+          </article>
+        </div>
+
+        <div class="final-argument">
+          <span>Final takeaway</span>
+          <p>Our learning is that DEI becomes real when love is practiced as responsibility and strategy is practiced as accountability. A classroom, shelter, dashboard, hospital, workplace, or supply chain is not inclusive because it says the right words. It becomes inclusive when people can enter, participate, ask for help, and be treated with dignity without having to prove they deserve access first.</p>
+        </div>
+      </section>
+
+      <section class="accessibility-statement" aria-label="Accessibility statement">
+        <div>
+          <span>Accessibility statement</span>
+          <h2>Built so people can enter in more than one way.</h2>
+        </div>
+        <p>This website uses plain language, visible contrast, keyboard-accessible links and buttons, descriptive alt text, mDEIa takeaways, and multiple ways to engage: watching, listening, reading, playing, and reflecting.</p>
+      </section>
+
+      <section class="section curated-hidden" id="watch-play">
+        <div class="section-heading">
+          <p class="eyebrow">Watch + play</p>
+          <h2>A small mDEIa break, not a second website.</h2>
+          <p>Cartoons, clips, comics, and one puzzle keep the tone playful while leaving the main focus on the personal DEI journey.</p>
+        </div>
+
+        <div class="theater-tabs" role="tablist" aria-label="Cartoon theater">
+          <button class="theater-tab is-active" id="tab-videos" role="tab" aria-selected="true" aria-controls="panel-videos" data-panel="videos">Videos</button>
+          <button class="theater-tab" id="tab-comics" role="tab" aria-selected="false" aria-controls="panel-comics" data-panel="comics">Comics</button>
+          <button class="theater-tab curated-hidden" id="tab-games" role="tab" aria-selected="false" aria-controls="panel-games" data-panel="games">Games</button>
+          <button class="theater-tab curated-hidden" id="tab-surveys" role="tab" aria-selected="false" aria-controls="panel-surveys" data-panel="surveys">Surveys</button>
+        </div>
+
+        <div class="theater-panel is-active" id="panel-videos" role="tabpanel" aria-labelledby="tab-videos">
+          <div class="video-grid">
+            <article class="video-card featured-video">
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/KZBTYViDPlQ"
+                  title="Brene Brown on Empathy vs Sympathy"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-mDEIa; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="video-copy">
+                <p class="eyebrow">Empathy practice</p>
+                <h3>Brene Brown: Empathy vs Sympathy</h3>
+                <p>Use this as a quick opener for care, listening, and psychological safety.</p>
+                <ul>
+                  <li>Where does sympathy accidentally create distance?</li>
+                  <li>What would empathy sound like in a frontline or student-team setting?</li>
+                  <li>How do care and boundaries work together?</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <div class="video-poster" aria-hidden="true">
+                <span>Animated short</span>
+                <strong>Difference, belonging, and workplace culture.</strong>
+              </div>
+              <div class="video-copy">
+                <p class="eyebrow">Inclusion at work</p>
+                <h3>Purl discussion lens</h3>
+                <p>An animated way to discuss assimilation, belonging, and what teams ask people to hide.</p>
+                <ul>
+                  <li>What did the environment reward?</li>
+                  <li>What changed when difference was welcomed?</li>
+                  <li>What would an inclusive onboarding process look like?</li>
+                </ul>
+                <a class="button secondary compact-button" href="https://www.youtube.com/results?search_query=Pixar+Purl+animated+short" target="_blank" rel="noreferrer">Find video</a>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/jOUeHPS8A8g"
+                  title="Who Moved My Cheese video"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-mDEIa; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="video-copy">
+                <p class="eyebrow">Change + adaptation</p>
+                <h3>Who Moved My Cheese? discussion lens</h3>
+                <p>Use this clip as a light way into change, resistance, curiosity, and fairness.</p>
+                <ul>
+                  <li>Who gets warning before change happens?</li>
+                  <li>Who has resources to explore a new path?</li>
+                  <li>What would make adaptation more equitable?</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <div class="video-poster calm" aria-hidden="true">
+                <span>All ages</span>
+                <strong>Talk, listen, act: kindness with courage.</strong>
+              </div>
+              <div class="video-copy">
+                <p class="eyebrow">Younger audiences</p>
+                <h3>Arthur / Sesame-style discussion lens</h3>
+                <p>For younger groups, choose a gentle clip about fairness, emotions, friendship, or speaking up.</p>
+                <ul>
+                  <li>What does the character notice?</li>
+                  <li>Who helps, and how?</li>
+                  <li>What is one kind action we can practice today?</li>
+                </ul>
+                <a class="button secondary compact-button" href="https://www.youtube.com/results?search_query=animated+kids+empathy+inclusion+fairness" target="_blank" rel="noreferrer">Find video</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="theater-panel" id="panel-comics" role="tabpanel" aria-labelledby="tab-comics" hidden>
+          <div class="comic-reader">
+            <article class="comic-full">
+              <img src="assets/comic-inclusive-meeting.png" alt="Four-panel comic of a team redesigning a meeting so more people can contribute">
+              <div>
+                <span>Comic prompt 01</span>
+                <h3>The quiet voice was data.</h3>
+                <p>What changed when the team treated silence as information instead of disengagement?</p>
+              </div>
+            </article>
+            <article class="comic-full">
+              <img src="assets/comic-change-map.png" alt="Four-panel comic of a group finding a more accessible path after a familiar route is blocked">
+              <div>
+                <span>Comic prompt 02</span>
+                <h3>The new path should be easier for more people.</h3>
+                <p>When change happens, who gets a map, time, support, and permission to ask questions?</p>
+              </div>
+            </article>
+          </div>
+          <div class="comic-generator">
+            <button class="button primary" id="comic-prompt-button">Shuffle comic prompt</button>
+            <p id="comic-prompt" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div class="theater-panel curated-hidden" id="panel-games" role="tabpanel" aria-labelledby="tab-games" hidden>
+          <div class="game-layout curated-hidden">
+            <article class="game-card">
+              <p class="eyebrow">Mini game</p>
+              <h3>Inclusion Quest</h3>
+              <p id="quest-scenario">A workshop starts, but one participant has not spoken and another keeps getting interrupted.</p>
+              <div class="choice-grid">
+                <button class="choice-button" data-choice="ask">Pause and ask what would make participation easier.</button>
+                <button class="choice-button" data-choice="push">Keep moving so the agenda stays on time.</button>
+                <button class="choice-button" data-choice="private">Check in privately after the session.</button>
+              </div>
+              <div class="game-result" aria-live="polite">
+                <span>Result</span>
+                <p id="quest-result">Choose an action to see the equity effect.</p>
+              </div>
+            </article>
+            <article class="game-card">
+              <p class="eyebrow">Match game</p>
+              <h3>Practice translator</h3>
+              <p>Pick a value and see what it looks like as a behavior.</p>
+              <div class="value-buttons">
+                <button class="value-button" data-value="trust">Trust</button>
+                <button class="value-button" data-value="respect">Respect</button>
+                <button class="value-button" data-value="curiosity">Curiosity</button>
+                <button class="value-button" data-value="vulnerability">Vulnerability</button>
+              </div>
+              <div class="game-result" aria-live="polite">
+                <span>Behavior</span>
+                <p id="value-result">Choose a value to translate it into action.</p>
+              </div>
+            </article>
+          </div>
+          <div class="puzzle-zone">
+            <article class="game-card word-search-card">
+              <p class="eyebrow">Word search</p>
+              <h3>Find the DEI words.</h3>
+              <p>Click the letters of a word in order, then check it. Words may go across or down.</p>
+              <div class="word-search" id="word-search" aria-label="DEI word search puzzle"></div>
+              <div class="word-bank" id="word-bank" aria-label="Words to find"></div>
+              <div class="puzzle-actions">
+                <button class="button primary" id="word-check">Check word</button>
+                <button class="button secondary" id="word-clear">Clear letters</button>
+              </div>
+              <div class="game-result" aria-live="polite">
+                <span>Word search result</span>
+                <p id="word-result">Find: EQUITY, CARE, TRUST, ACCESS, ALLY, and BIAS.</p>
+              </div>
+            </article>
+
+            <article class="game-card crossword-card curated-hidden">
+              <p class="eyebrow">Mini crossword</p>
+              <h3>Decode the practice words.</h3>
+              <p>Type the word that matches each clue. Use uppercase or lowercase.</p>
+              <div class="crossword-list">
+                <label>
+                  Fair support that removes barriers
+                  <input class="crossword-input" data-answer="equity" type="text" autocomplete="off">
+                </label>
+                <label>
+                  Acting with care and influence beside others
+                  <input class="crossword-input" data-answer="ally" type="text" autocomplete="off">
+                </label>
+                <label>
+                  Design that lets people participate
+                  <input class="crossword-input" data-answer="access" type="text" autocomplete="off">
+                </label>
+                <label>
+                  Assumption that can shape decisions
+                  <input class="crossword-input" data-answer="bias" type="text" autocomplete="off">
+                </label>
+              </div>
+              <div class="puzzle-actions">
+                <button class="button primary" id="crossword-check">Check answers</button>
+                <button class="button secondary" id="crossword-clear">Reset</button>
+              </div>
+              <div class="game-result" aria-live="polite">
+                <span>Crossword result</span>
+                <p id="crossword-result">Try the clues, then check your answers.</p>
+              </div>
+            </article>
+
+            <article class="game-card sort-card curated-hidden">
+              <p class="eyebrow">Sorting game</p>
+              <h3>Ally move or rethink?</h3>
+              <p>Click each action to sort it. The goal is not perfection; it is noticing what DEI looks like in behavior.</p>
+              <div class="sort-grid">
+                <button class="sort-chip" data-good="true">Share crDEIt in a group project</button>
+                <button class="sort-chip" data-good="false">Ask one marginalized person to speak for everyone</button>
+                <button class="sort-chip" data-good="true">Add captions and multiple ways to participate</button>
+                <button class="sort-chip" data-good="false">Ignore feedback because nobody complained before</button>
+                <button class="sort-chip" data-good="true">Interrupt a biased joke without making the harmed person respond</button>
+                <button class="sort-chip" data-good="false">Invite someone only so the group looks diverse</button>
+              </div>
+              <div class="game-result" aria-live="polite">
+                <span>Sorting score</span>
+                <p id="sort-result">Click an action to begin.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="theater-panel curated-hidden" id="panel-surveys" role="tabpanel" aria-labelledby="tab-surveys" hidden>
+          <div class="survey-shell">
+            <form class="survey-card">
+              <p class="eyebrow">Belonging pulse</p>
+              <h3>How accessible does this space feel today?</h3>
+              <label>
+                I understand how to participate.
+                <input class="survey-input" type="range" min="1" max="5" value="3">
+              </label>
+              <label>
+                I can ask for what I need without feeling like a problem.
+                <input class="survey-input" type="range" min="1" max="5" value="3">
+              </label>
+              <label>
+                Different kinds of knowledge are respected here.
+                <input class="survey-input" type="range" min="1" max="5" value="3">
+              </label>
+              <label>
+                Feedback leads to visible follow-through.
+                <input class="survey-input" type="range" min="1" max="5" value="3">
+              </label>
+            </form>
+            <div class="survey-result" aria-live="polite">
+              <span>Pulse reading</span>
+              <p id="survey-result-text"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section curated-hidden" id="tools">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive tools</p>
+          <h2>Choose a lens for the moment you are in.</h2>
+          <p>Each tool is designed for quick use in meetings, program design, supervision, or community engagement.</p>
+        </div>
+
+        <div class="tool-layout">
+          <aside class="tool-menu" aria-label="Tool selector">
+            <button class="tool-tab is-active" data-tool="access">Access check</button>
+            <button class="tool-tab" data-tool="safety">Psychological safety</button>
+            <button class="tool-tab" data-tool="power">Power map</button>
+            <button class="tool-tab" data-tool="repair">Repair script</button>
+          </aside>
+          <article class="tool-panel" aria-live="polite">
+            <div class="tool-panel-top">
+              <p class="eyebrow" id="tool-kicker">Access check</p>
+              <h3 id="tool-title">Who could be unintentionally left out?</h3>
+            </div>
+            <p id="tool-copy">
+              Review a policy, event, intake process, or team decision through barriers people might face before they ever arrive.
+            </p>
+            <ul id="tool-prompts" class="prompt-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted curated-hidden" id="topics">
+        <div class="section-heading">
+          <p class="eyebrow">Topic library</p>
+          <h2>Browse ideas that connect care, equity, and operations.</h2>
+          <p>Filter by theme to find short explanations and practical next steps.</p>
+        </div>
+
+        <div class="filters" aria-label="Topic filters">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="housing">Housing</button>
+          <button class="filter" data-filter="workplace">Workplace</button>
+          <button class="filter" data-filter="care">Care</button>
+          <button class="filter" data-filter="community">Community</button>
+        </div>
+
+        <div class="topic-grid">
+          <article class="topic-card" data-topic="housing care">
+            <p>Harm reduction</p>
+            <h3>Reduce stigma before asking for trust.</h3>
+            <span>Offer choice, clear information, and non-punitive support during high-stress interactions.</span>
+          </article>
+          <article class="topic-card" data-topic="workplace care">
+            <p>Psychological safety</p>
+            <h3>Make it safer to speak before the crisis.</h3>
+            <span>Normalize dissent, document escalation paths, and thank people for surfacing risks early.</span>
+          </article>
+          <article class="topic-card" data-topic="housing community">
+            <p>Access gaps</p>
+            <h3>Design for people who are usually asked to adapt.</h3>
+            <span>Audit hours, language, documentation, cost, transportation, digital access, and eligibility rules.</span>
+          </article>
+          <article class="topic-card" data-topic="workplace">
+            <p>Conflict repair</p>
+            <h3>Move from defensiveness to accountability.</h3>
+            <span>Name impact, clarify needs, agree on changed behavior, and revisit the repair.</span>
+          </article>
+          <article class="topic-card" data-topic="community housing">
+            <p>Economic empowerment</p>
+            <h3>Treat lived expertise as valuable work.</h3>
+            <span>Create paid opportunities, low-barrier markets, bursaries, mentorship, and skill-building pathways.</span>
+          </article>
+          <article class="topic-card" data-topic="workplace community">
+            <p>Inclusive programming</p>
+            <h3>Build with people, not around them.</h3>
+            <span>Invite co-design, compensate contributors when possible, and close the loop after feedback.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section curated-hidden" id="scenarios">
+        <div class="section-heading">
+          <p class="eyebrow">Scenario practice</p>
+          <h2>Try a grounded DEI conversation.</h2>
+          <p>Use these prompts for workshops, student clubs, frontline teams, or leadership reflection.</p>
+        </div>
+
+        <div class="scenario-shell">
+          <article class="scenario-card">
+            <p class="eyebrow" id="scenario-theme">Workplace equity</p>
+            <h3 id="scenario-title">A staff member says schedule changes are hurting caregivers.</h3>
+            <p id="scenario-body">
+              The change improved coverage, but several employees are quietly swapping shifts and one has stopped volunteering for extra duties.
+            </p>
+            <div class="question-box">
+              <span>Ask first</span>
+              <p id="scenario-question">Whose constraints were invisible when this decision was made?</p>
+            </div>
+          </article>
+          <div class="scenario-controls">
+            <button class="button primary" id="new-scenario">New scenario</button>
+            <button class="button secondary" id="reflection-toggle" aria-expanded="false">Show reflection</button>
+            <div class="reflection" id="reflection" hidden>
+              <p>Look for the operational win and the equity cost at the same time. A strong response keeps coverage goals while adding transparent exceptions, caregiver input, and a review date.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted curated-hidden" id="action">
+        <div class="section-heading">
+          <p class="eyebrow">Action builder</p>
+          <h2>Create a small DEI commitment you can actually keep.</h2>
+          <p>Pick one focus, one practice, and one way to measure whether it helped.</p>
+        </div>
+
+        <form class="action-builder">
+          <label>
+            Focus area
+            <select id="focus">
+              <option>psychological safety</option>
+              <option>accessibility</option>
+              <option>harm reduction</option>
+              <option>inclusive programming</option>
+              <option>economic empowerment</option>
+            </select>
+          </label>
+          <label>
+            Practice
+            <select id="practice">
+              <option>ask who is missing from the decision</option>
+              <option>co-design with people affected by the outcome</option>
+              <option>make expectations and options explicit</option>
+              <option>create a low-barrier feedback channel</option>
+              <option>fund or compensate participation</option>
+            </select>
+          </label>
+          <label>
+            Measure
+            <select id="measure">
+              <option>participation feels safer and more representative</option>
+              <option>people can access support with fewer steps</option>
+              <option>conflicts are repaired faster and with less harm</option>
+              <option>staff confidence improves after training</option>
+              <option>community members gain practical resources</option>
+            </select>
+          </label>
+        </form>
+        <div class="pledge" aria-live="polite">
+          <span>Your commitment</span>
+          <p id="pledge-text"></p>
+        </div>
+      </section>
+
+      <section class="section curated-hidden" id="reflection-journal">
+        <div class="section-heading">
+          <p class="eyebrow">Reflection journal</p>
+          <h2>Close the unessay by turning insight into action.</h2>
+          <p>Use this as a final page, class discussion prompt, or personal takeaway.</p>
+        </div>
+
+        <div class="journal-layout">
+          <article class="journal-card">
+            <span>Prompt</span>
+            <p id="journal-prompt">What assumption did I notice in myself while exploring this site?</p>
+            <button class="button primary" id="journal-prompt-button">Shuffle reflection</button>
+          </article>
+          <article class="journal-card">
+            <span>My lens</span>
+            <p>This unessay connects DEI to psychology, housing justice, harm reduction, social impact, and inclusive leadership. The format matters because DEI is relational: people learn by noticing, feeling, discussing, choosing, and repairing.</p>
+          </article>
+          <article class="journal-card">
+            <span>Final question</span>
+            <p>What is one barrier I can help reduce this week, and who should be part of deciding how?</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="#home">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

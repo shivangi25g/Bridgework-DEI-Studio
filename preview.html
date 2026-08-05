@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Behind the Door - 3 Minute Preview</title>
+    <style>
+      :root {
+        --ink: #152026;
+        --soft: #42535b;
+        --paper: #fbfaf6;
+        --mint: #e6f3ed;
+        --teal: #0b7c72;
+        --teal-dark: #075b55;
+        --coral: #d85f4f;
+        --gold: #d99d26;
+        --blue: #244c7a;
+        --white: #fff;
+        --line: #d9e2df;
+        --shadow: 0 18px 70px rgba(21, 32, 38, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.45;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .deck-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 12px clamp(18px, 4vw, 56px);
+        background: rgba(251, 250, 246, 0.94);
+        border-bottom: 1px solid rgba(21, 32, 38, 0.1);
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .brand span:first-child {
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        color: var(--white);
+        background: var(--teal);
+      }
+
+      .deck-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px 16px;
+        color: var(--soft);
+        font-weight: 800;
+      }
+
+      .deck-links a {
+        text-decoration: none;
+      }
+
+      main {
+        scroll-snap-type: y mandatory;
+      }
+
+      .slide {
+        min-height: 100vh;
+        scroll-snap-align: start;
+        display: grid;
+        align-items: center;
+        padding: 86px clamp(22px, 5vw, 72px) 44px;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        color: var(--white);
+        background: var(--ink);
+      }
+
+      .hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.56;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(7, 25, 29, 0.95), rgba(7, 25, 29, 0.4));
+      }
+
+      .hero-content,
+      .slide-inner {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-content {
+        max-width: 900px;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--coral);
+        font-size: 0.8rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 840px;
+        margin-bottom: 20px;
+        font-size: clamp(3.1rem, 8vw, 7.4rem);
+        line-height: 0.96;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        max-width: 920px;
+        margin-bottom: 18px;
+        font-size: clamp(2.3rem, 5vw, 5rem);
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 1.35rem;
+        line-height: 1.15;
+      }
+
+      .hero p,
+      .lead {
+        max-width: 760px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: clamp(1.15rem, 2vw, 1.45rem);
+      }
+
+      .slide:not(.hero) .lead {
+        color: var(--soft);
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        min-height: 48px;
+        padding: 13px 22px;
+        border-radius: 999px;
+        color: var(--white);
+        background: var(--teal);
+        text-decoration: none;
+        font-weight: 900;
+      }
+
+      .button.secondary {
+        color: var(--ink);
+        background: var(--white);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 30px;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card {
+        min-height: 230px;
+        padding: clamp(22px, 3vw, 34px);
+        border-radius: 8px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-top: 6px solid var(--teal);
+        box-shadow: var(--shadow);
+      }
+
+      .card:nth-child(2n) {
+        border-top-color: var(--coral);
+      }
+
+      .card:nth-child(3n) {
+        border-top-color: var(--gold);
+      }
+
+      .card p {
+        margin-bottom: 0;
+        color: var(--soft);
+      }
+
+      .mock-browser {
+        overflow: hidden;
+        border-radius: 8px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .browser-bar {
+        display: flex;
+        gap: 7px;
+        padding: 12px 14px;
+        background: #edf1ef;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .browser-bar span {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--coral);
+      }
+
+      .browser-bar span:nth-child(2) {
+        background: var(--gold);
+      }
+
+      .browser-bar span:nth-child(3) {
+        background: var(--teal);
+      }
+
+      .browser-body {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 24px;
+        padding: 24px;
+      }
+
+      .mini-hero {
+        min-height: 310px;
+        border-radius: 8px;
+        background: linear-gradient(180deg, rgba(21, 32, 38, 0.1), rgba(21, 32, 38, 0.68)), url("assets/unessay-hero.png") center / cover;
+      }
+
+      .pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .pill-list span {
+        padding: 9px 12px;
+        border-radius: 999px;
+        color: var(--teal-dark);
+        background: var(--mint);
+        font-weight: 900;
+      }
+
+      .door-strip {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .door {
+        display: grid;
+        place-items: end center;
+        min-height: 130px;
+        padding: 12px;
+        border-radius: 8px;
+        color: var(--white);
+        background: linear-gradient(180deg, var(--teal), var(--teal-dark));
+        font-weight: 900;
+        text-align: center;
+      }
+
+      .voice-row {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .voice {
+        min-height: 150px;
+        padding: 16px;
+        border-radius: 8px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        box-shadow: 0 12px 34px rgba(21, 32, 38, 0.09);
+      }
+
+      .voice strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--blue);
+      }
+
+      .speaker-note {
+        margin-top: 28px;
+        padding: 18px;
+        border-radius: 8px;
+        background: rgba(11, 124, 114, 0.1);
+        border-left: 6px solid var(--teal);
+      }
+
+      .speaker-note strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .step {
+        min-height: 140px;
+        padding: 18px;
+        border-radius: 8px;
+        background: var(--white);
+        border: 1px solid var(--line);
+      }
+
+      .step span {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--coral);
+        font-weight: 900;
+      }
+
+      @mDEIa (max-width: 900px) {
+        .deck-nav {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .grid,
+        .grid.two,
+        .browser-body,
+        .door-strip,
+        .voice-row,
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+
+        .slide {
+          min-height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="deck-nav">
+      <a class="brand" href="#slide-1"><span>B</span><strong>Behind the Door Preview</strong></a>
+      <nav class="deck-links" aria-label="Preview slides">
+        <a href="#slide-1">Start</a>
+        <a href="#slide-2">Website</a>
+        <a href="#slide-3">Games</a>
+        <a href="#slide-4">Journey</a>
+        <a href="#slide-5">Voices</a>
+        <a href="#slide-6">Close</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="slide hero" id="slide-1">
+        <img src="assets/unessay-hero.png" alt="Illustrated DEI learning space with diverse people, comics, and mind maps">
+        <div class="hero-content">
+          <p class="eyebrow">3-minute unessay preview</p>
+          <h1>Behind the Door, Behind the Dashboard.</h1>
+          <p>A personal, interactive website arguing that DEI is not only awareness. It is the practice of redesigning care, work, learning, and systems so people are not left to overcome barriers alone.</p>
+          <div class="button-row">
+            <a class="button" href="index.html">Open Full Website</a>
+            <a class="button secondary" href="#slide-2">Start Preview</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-2">
+        <div class="slide-inner">
+          <p class="eyebrow">What I built</p>
+          <h2>A website that makes DEI something people can enter, play with, listen to, and test.</h2>
+          <div class="mock-browser" aria-label="Mock website preview">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <div class="browser-body">
+              <div class="mini-hero"></div>
+              <div>
+                <h3>Core experience</h3>
+                <p>The project moves from games into two connected lenses: Shivangi's frontline care lens and Vivek's strategy, data, and systems lens. It then brings in voices, theory, allyship, and a final argument.</p>
+                <div class="pill-list">
+                  <span>Play First</span>
+                  <span>Care Lens</span>
+                  <span>Strategy Lens</span>
+                  <span>Voices</span>
+                  <span>Evidence</span>
+                  <span>So What?</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="speaker-note">
+            <strong>Say this:</strong>
+            This format matters because DEI is not only content to memorize. It is something we practice through choices, relationships, and systems.
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-3">
+        <div class="slide-inner">
+          <p class="eyebrow">Opening interaction</p>
+          <h2>The site begins with games so the topic feels approachable and connected to practice.</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>DEI Word Search</h3>
+              <p>Visitors find words like equity, ally, access, care, trust, and bias to build shared language.</p>
+            </article>
+            <article class="card">
+              <h3>Care Lens Bingo</h3>
+              <p>A barrier-focused game asks visitors to notice how documents, trauma, transport, privacy, and trust can cluster.</p>
+            </article>
+            <article class="card">
+              <h3>Care + Strategy Scenarios</h3>
+              <p>Scenario cards ask visitors to choose responses that reduce barriers instead of blaming individuals.</p>
+            </article>
+          </div>
+          <div class="speaker-note">
+            <strong>Say this:</strong>
+            I wanted the first action to be participation, not reading a wall of text. The games lower defensiveness while still teaching DEI language and behaviour.
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-4">
+        <div class="slide-inner">
+          <p class="eyebrow">Two lenses</p>
+          <h2>Behind the Door and Behind the Dashboard turn experience into DEI simulations.</h2>
+          <p class="lead">The care lens moves through a shelter-inspired path: intake, dorm, dining, mDEIcal, quiet, supply, staff, and leadership spaces. The strategy lens asks who is counted, who benefits, and who may be left out when systems, dashboards, services, and operations are designed.</p>
+          <div class="door-strip" aria-label="Shelter doors">
+            <div class="door">Front door</div>
+            <div class="door">Intake</div>
+            <div class="door">Dining</div>
+            <div class="door">MDEIcal room</div>
+            <div class="door">Quiet room</div>
+            <div class="door">Supply room</div>
+            <div class="door">Dashboard</div>
+          </div>
+          <div class="speaker-note">
+            <strong>Say this:</strong>
+            This is where the project becomes personal and practical: my frontline experience shows the human side of barriers, while the strategy lens shows how systems can either remove or reproduce those barriers.
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-5">
+        <div class="slide-inner">
+          <p class="eyebrow">Community voices</p>
+          <h2>The project includes real perspectives from India and Canada.</h2>
+          <div class="voice-row">
+            <div class="voice"><strong>India</strong>Students</div>
+            <div class="voice"><strong>India</strong>Teacher + principal</div>
+            <div class="voice"><strong>India</strong>Psychologist</div>
+            <div class="voice"><strong>India</strong>Law professional</div>
+            <div class="voice"><strong>Canada</strong>Shelter/city case manager</div>
+            <div class="voice"><strong>Canada</strong>ER nurse + MBA student</div>
+            <div class="voice"><strong>Canada</strong>Queer youth-support worker</div>
+            <div class="voice"><strong>Canada</strong>Software + supply chain</div>
+          </div>
+          <div class="speaker-note">
+            <strong>Say this:</strong>
+            These voices show that DEI is both global and local. The website treats them as a listening circle, with short takeaways and an ethics note so the stories are held with care.
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-6">
+        <div class="slide-inner">
+          <p class="eyebrow">Why it works as an unessay</p>
+          <h2>The website connects course theory, toolkit ideas, and lived evidence.</h2>
+          <div class="timeline">
+            <div class="step"><span>1</span>Start with play</div>
+            <div class="step"><span>2</span>Enter care and strategy lenses</div>
+            <div class="step"><span>3</span>Listen across contexts</div>
+            <div class="step"><span>4</span>Connect to bell hooks, learning-to-learn, and DEI toolkits</div>
+            <div class="step"><span>5</span>Leave with a design question</div>
+          </div>
+          <div class="speaker-note">
+            <strong>Closing line:</strong>
+            DEI becomes real when love is practiced as responsibility and strategy is practiced as accountability.
+          </div>
+          <div class="button-row">
+            <a class="button" href="index.html">Open Full Website</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
